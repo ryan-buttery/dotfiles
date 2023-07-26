@@ -1,0 +1,72 @@
+############################################################################################
+#                                                                                          #
+# ______                   ______            _     _  ______       _   _                   #
+# | ___ \                  |  _  \          (_)   | | | ___ \     | | | |                  #
+# | |_/ /   _  __ _ _ __   | | | |__ ___   ___  __| | | |_/ /_   _| |_| |_ ___ _ __ _   _  #
+# |    / | | |/ _` | '_ \  | | | / _` \ \ / / |/ _` | | ___ \ | | | __| __/ _ \ '__| | | | #
+# | |\ \ |_| | (_| | | | | | |/ / (_| |\ V /| | (_| | | |_/ / |_| | |_| ||  __/ |  | |_| | #
+# \_| \_\__, |\__,_|_| |_| |___/ \__,_| \_/ |_|\__,_| \____/ \__,_|\__|\__\___|_|   \__, | #
+#        __/ |                                                                       __/ | #
+#       |___/                                                                       |___/  #
+#                                                                                          #
+#                                 ryanbuttery.co.uk                                        #
+#                               github.com/ryanbuttery                                     #
+#                                                                                          #
+############################################################################################
+
+
+shell = "/usr/bin/fish"
+
+[env]
+TERM = "alacritty"
+EDITOR = "/usr/bin/emacs"
+
+[window]
+dimensions = { columns = 120, lines = 40}
+padding = { x = 5, y = 5 }
+decorations = "Full"
+title = "Alacritty"
+
+[font]
+normal = { family = "Liberation Mono", style = "Regular" }
+size = 14
+
+## Themes ##
+
+# Monokai classic
+[colors.primary]
+background = "#272822"
+foreground = "#FFFFFF"
+
+[colors.normal]
+black = "#1a1a1a"
+red = "#f4005f"
+green = "#98e024"
+yellow = "#fa8419"
+blue = "#9d65ff"
+magenta = "#f4005f"
+cyan = "#58d1eb"
+white = "#c4c5b5"
+
+[colors.bright]
+black = "#625e4c"
+red = "#f4005f"
+green = "#98e024"
+yellow = "#e0d561"
+blue = "#9d65ff"
+magenta = "#f4005f"
+cyan = "#58d1eb"
+white = "#f6f6ef"
+
+
+# Colors (Monokai Pro)
+
+  # Default colors
+#primary = {background = "0x2c2525",foreground = "0xfff1f3"}
+
+
+  # Normal colors
+#normal= { black="0x2c2525",red="0xfd6883",green="0xadda78",yellow="0xf9cc6c",blue="0xf38d70",magenta="0xa8a9eb",cyan="0x85dacc",white="0xfff1f3" }
+
+  # Bright colors
+#bright= {black="0x72696a",red="0xfd6883",green="0xadda78",yellow="0xf9cc6c",blue="0xf38d70",magenta="0xa8a9eb",cyan="0x85dacc",white="0xfff1f3"}

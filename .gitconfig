@@ -1,0 +1,8 @@
+[user]
+	email = 21200135+ryan-buttery@users.noreply.github.com
+	name = Ryan Buttery
+	signingkey = 75DD22329351F385
+[commit]
+	gpgsign = true
+[init]
+	defaultBranch = master

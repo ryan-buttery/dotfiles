@@ -26,7 +26,7 @@ dimensions = { columns = 120, lines = 40}
 padding = { x = 5, y = 5 }
 decorations = "Full"
 title = "Alacritty"
-opacity = 0.96
+opacity = 0.92
 
 [font]
 normal = { family = "Liberation Mono", style = "Regular" }

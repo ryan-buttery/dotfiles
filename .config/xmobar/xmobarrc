@@ -38,5 +38,5 @@ Config { font = "xft: Ubuntu Mono:pixelsize=18:antialias=true:hinting=true"
        , sepChar = "%"
        , alignSep = "}{"
        , template = "%battery% <fc=#625e4c>|</fc> <fc=#9d65ff>%cpu%</fc> <fc=#625e4c>|</fc> <fc=#f4005f>%memory%</fc> <fc=#625e4c>|</fc> <fc=#58d1eb>%wlo1%</fc> }\
-                    \{ <fc=#e0d561>%date%</fc> <fc=#625e4c>|</fc> <fc=#fa8419>%EPPO%</fc> <fc=#625e4c>|</fc> %uname%"
+                    \{ <fc=#e0d561>%date%</fc> <fc=#625e4c>|</fc> <fc=#fa8419>%EPPO%</fc> <fc=#625e4c>|</fc>"
        }

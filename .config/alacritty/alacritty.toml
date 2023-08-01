@@ -19,7 +19,7 @@ shell = "/usr/bin/fish"
 
 [env]
 TERM = "alacritty"
-EDITOR = "/usr/bin/emacs"
+#EDITOR = "/usr/bin/emacs-gtk"
 
 [window]
 dimensions = { columns = 120, lines = 40}

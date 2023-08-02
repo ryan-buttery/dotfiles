@@ -23,7 +23,9 @@ end
 
 ## PATH ADDITIONS ##
 
-set PATH $HOME/.cargo/bin $HOME/scripts $HOME/.emacs.d/bin $HOME/.config/emacs/bin $HOME/.local/bin $PATH
+set PATH $HOME/.ghcup/env  $HOME/.cargo/bin $HOME/scripts $HOME/.emacs.d/bin $HOME/.config/emacs/bin $HOME/.local/bin $PATH
+
+# dotenv $HOME/.ghcup/env
 
 ## EYE CANDY ##
 

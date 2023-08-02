@@ -194,7 +194,7 @@ myMouseBindings (XConfig {XMonad.modMask = modm}) = M.fromList $
 -- The available layouts.  Note that each layout is separated by |||,
 -- which denotes layout choice.
 --
-myLayout = spacing 1 $ avoidStruts (tiled ||| Mirror tiled ||| Full)
+myLayout = spacing 5 $ avoidStruts (tiled ||| Mirror tiled ||| Full)
   where
      -- default tiling algorithm partitions the screen into two panes
      tiled   = Tall nmaster delta ratio
@@ -257,9 +257,9 @@ myLogHook = return ()
 --
 -- By default, do nothing.
 myStartupHook = do
-	spawnOnce "nitrogen --restore &"
-	spawnOnce "compton &"
-        spawnOnce "bash /home/ryanb/scripts/dualmon"
+    spawnOnce "nitrogen --restore &"
+    spawnOnce "compton &"
+    spawnOnce "bash /home/ryanb/scripts/dualmon"
 
 ------------------------------------------------------------------------
 -- Now run xmonad with all the defaults we set up.
@@ -267,7 +267,8 @@ myStartupHook = do
 -- Run xmonad with the settings you specify. No need to modify this.
 --
 main = do
-  xmproc <- spawnPipe "xmobar -x 1 /home/ryanb/.config/xmobar/xmobarrc"
+  xmproc1 <- spawnPipe "xmobar -x 1 /home/ryanb/.config/xmobar/xmobarrc"
+  xmproc2 <- spawnPipe "xmobar -x 0 /home/ryanb/.config/xmobar/xmobarrc"
   xmonad $ docks defaults
 
 -- A structure containing your configuration settings, overriding

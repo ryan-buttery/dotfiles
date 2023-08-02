@@ -139,7 +139,10 @@ fi
 
 PATH="$HOME/.cargo/bin${PATH:+:${PATH}}"
 PATH="$HOME/scripts${PATH:+:${PATH}}"
+PATH="$HOME/.ghcup/env${PATH:+:${PATH}}"
+source "$HOME/.ghcup/env"
 
+# [ -f "/home/ryanb/.ghcup/env" ] && source "/home/ryanb/.ghcup/env" # ghcup-env
 ## EYE CANDY ##
 
 #neofetch
@@ -179,3 +182,7 @@ alias config='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'
 # GPG Key
 
 #export GPG_TTY=\$(tty)
+
+# Haskell env
+
+# [ -f "/home/ryanb/.ghcup/env" ] && source "/home/ryanb/.ghcup/env" # ghcup-env

@@ -24,6 +24,7 @@ import XMonad.Hooks.ManageDocks
 import XMonad.Util.Run
 import XMonad.Util.SpawnOnce
 import XMonad.Layout.NoBorders
+import XMonad.Layout.ResizableTile
 import XMonad.Layout.Tabbed
 import XMonad.Layout.SimpleDecoration (shrinkText)
 import XMonad.Layout.Spacing
@@ -107,6 +108,10 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
 
     --  Reset the layouts on the current workspace to default
     , ((modm .|. shiftMask, xK_space ), setLayout $ XMonad.layoutHook conf)
+
+    -- Resize ResizableTall windows
+    , ((modm,               xK_a     ), sendMessage MirrorShrink)
+    , ((modm,               xK_z     ), sendMessage MirrorExpand)
 
     -- Resize viewed windows to the correct size
     , ((modm,               xK_n     ), refresh)
@@ -212,10 +217,10 @@ myMouseBindings (XConfig {XMonad.modMask = modm}) = M.fromList $
 -- The available layouts.  Note that each layout is separated by |||,
 -- which denotes layout choice.
 --
-myLayout = spacing 5 $ avoidStruts $ ( tiled ||| Mirror tiled ||| noBorders (tabbed shrinkText myTabConfig) )
+myLayout = avoidStruts $ ( tiled ||| Mirror tiled ||| noBorders (tabbed shrinkText myTabConfig) )
   where
      -- default tiling algorithm partitions the screen into two panes
-     tiled   = Tall nmaster delta ratio
+     tiled   = spacing 3 $ ResizableTall nmaster delta ratio []
 
      -- The default number of windows in the master pane
      nmaster = 1

@@ -71,6 +71,9 @@ myNormalBorderColor  = "#f6f6ef"
 myFocusedBorderColor = "#625e4c"
 
 -- Config for tabbed mode
+------------------------------------------
+-- UPDATE THE COLOURS TO MONOKAI ---------
+------------------------------------------
 myTabConfig = def { activeColor = "#556064"
                   , inactiveColor = "#2F3D44"
                   , urgentColor = "#FDF6E3"

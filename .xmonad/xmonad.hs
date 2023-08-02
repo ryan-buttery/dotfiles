@@ -28,6 +28,7 @@ import XMonad.Layout.ResizableTile
 import XMonad.Layout.Tabbed
 import XMonad.Layout.SimpleDecoration (shrinkText)
 import XMonad.Layout.Spacing
+import XMonad.Layout.TwoPane
 import qualified XMonad.StackSet as W
 import qualified Data.Map        as M
 
@@ -75,16 +76,16 @@ myFocusedBorderColor = "#625e4c"
 ------------------------------------------
 -- UPDATE THE COLOURS TO MONOKAI ---------
 ------------------------------------------
-myTabConfig = def { activeColor = "#556064"
-                  , inactiveColor = "#2F3D44"
-                  , urgentColor = "#FDF6E3"
-                  , activeBorderColor = "#454948"
-                  , inactiveBorderColor = "#454948"
-                  , urgentBorderColor = "#268BD2"
-                  , activeTextColor = "#80FFF9"
-                  , inactiveTextColor = "#1ABC9C"
-                  , urgentTextColor = "#1ABC9C"
-                  , fontName = "xft:Noto Sans CJK:size=10:antialias=true"
+myTabConfig = def { activeColor = "#625e4c"
+                  , inactiveColor = "#1a1a1a"
+                  , urgentColor = "#f4005f"
+                  , activeBorderColor = "#f6f6ef"
+                  , inactiveBorderColor = "#c4c5b5"
+                  , urgentBorderColor = "#f4005f"
+                  , activeTextColor = "#f6f6ef"
+                  , inactiveTextColor = "#c4c5b5"
+                  , urgentTextColor = "#c4c5b5"
+                  , fontName = "xft:UbuntuMono CJK:size=10:antialias=true"
                   }
 ------------------------------------------------------------------------
 -- Key bindings. Add, modify or remove key bindings here.
@@ -217,10 +218,13 @@ myMouseBindings (XConfig {XMonad.modMask = modm}) = M.fromList $
 -- The available layouts.  Note that each layout is separated by |||,
 -- which denotes layout choice.
 --
-myLayout = avoidStruts $ ( tiled ||| Mirror tiled ||| noBorders (tabbed shrinkText myTabConfig) )
+myLayout = avoidStruts $ ( tiled ||| Mirror tiled ||| twopane ||| noBorders (tabbed shrinkText myTabConfig) )
   where
      -- default tiling algorithm partitions the screen into two panes
      tiled   = spacing 3 $ ResizableTall nmaster delta ratio []
+
+     -- config for two pane layout
+     twopane = spacing 3 $ TwoPane delta ratio
 
      -- The default number of windows in the master pane
      nmaster = 1

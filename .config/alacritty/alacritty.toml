@@ -30,7 +30,7 @@ opacity = 0.92
 
 [font]
 normal = { family = "Liberation Mono", style = "Regular" }
-size = 14
+size = 10
 
 ## Themes ##
 

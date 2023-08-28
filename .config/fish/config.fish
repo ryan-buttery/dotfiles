@@ -38,11 +38,11 @@ colorscript random
 alias ls='exa -al --color=always --group-directories-first' 
 
 # Apt aliases
-alias aptup='sudo apt update && sudo apt upgrade'
-alias aptupd='sudo apt update'
-alias aptupg='sudo apt upgrade'
-alias aptin='sudo apt install'
-alias aptrm='sudo apt remove'
+alias aptup='sudo nala update && sudo nala upgrade'
+alias aptupd='sudo nala update'
+alias aptupg='sudo nala upgrade'
+alias aptin='sudo nala install'
+alias aptrm='sudo nala remove'
 
 # Navigation Aliases
 alias ..='cd ..'
